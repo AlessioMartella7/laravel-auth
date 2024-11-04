@@ -35,7 +35,7 @@ class ProjectController extends Controller
 
         ]);
 
-        $project = Project::create();
+        $project = Project::create($data);
 
         return redirect()->route('admin.project.index');
     }

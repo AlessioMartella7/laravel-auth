@@ -10,6 +10,9 @@
                 <h1 class="text-center my-5 text-primary">
                     Projects
                 </h1>
+
+                <a href="{{ route('admin.project.create') }}" class="btn btn-primary btn-lg my-3">Create</a>
+
             </div>
             <div class="col-12">
                 <table class="table table-striped table-hover">
@@ -23,6 +26,7 @@
                             <th scope="col">End Date</th>
                             <th scope="col">Programming Language</th>
                             <th scope="col"></th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -38,9 +42,6 @@
                                 <td>
                                     <a href="{{ route('admin.project.show', $project->id) }}"
                                         class="btn btn-primary btn-sm">Show</a>
-                                </td>
-                                <td>
-                                    <a href="{{ route('admin.project.create') }}" class="btn btn-primary btn-sm">Create</a>
                                 </td>
                             </tr>
                         @empty
