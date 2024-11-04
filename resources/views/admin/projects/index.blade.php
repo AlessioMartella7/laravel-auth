@@ -2,7 +2,7 @@
 
 @section('page-title', 'Admin Index')
 
-@section('main-content')
+@section('content')
 
     <h1>Admin\projects Index</h1>
 @endsection
