@@ -10,6 +10,7 @@
                 <h1 class="text-center my-5 text-primary">
                     Create Project
                 </h1>
+
             </div>
             <div class="col-12 d-flex justify-content-center ">
 
@@ -63,31 +64,35 @@
                     <div class="form-group">
                         <label for="end_date">End Date</label>
                         <input type="date" class="form-control" id="end_date" name="end_date"
-                            value="{{ old('end_date') }}>
+                            value="{{ old('end_date') }}">
                         @error('end_date')
-<div class="alert
-                            alert-warning mt-2">{{ $message }}
+                            <div class="alert alert-warning mt-2">{{ $message }}</div>
+                        @enderror
                     </div>
-                @enderror
-        </div>
 
-        <div class="form-group">
-            <label for="programming_language">Programming Language</label>
-            <select class="form-control" id="programming_language" name="programming_language">
-                <option value="PHP">PHP</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="Python">Python</option>
-                <option value="Ruby">Ruby</option>
-                <option value="Java">Java</option>
-            </select>
-        </div>
+                    <div class="form-group">
+                        <label for="programming_language">Programming Language</label>
+                        <select class="form-control" id="programming_language" name="programming_language">
+                            <option value="PHP">PHP</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Python">Python</option>
+                            <option value="Ruby">Ruby</option>
+                            <option value="Java">Java</option>
+                        </select>
+                    </div>
 
-        <div class="text-center my-3">
-            <button type="submit" class="btn btn-success">Create Project</button>
+                    <div class="d-flex my-3">
+                        <div class="text-center justify-content-start align-items-center">
+                            <button type="submit" class="btn btn-success">Create Project</button>
+                        </div>
+                        <div class="text-center">
+                            <a href="{{ route('admin.project.index') }}" class="btn btn-warning ms-2">Back to Projects</a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
         </div>
-        </form>
     </div>
-</div>
-</div>
 
 @endsection
