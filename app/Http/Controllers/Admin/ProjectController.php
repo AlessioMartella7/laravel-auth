@@ -34,7 +34,7 @@ class ProjectController extends Controller
 
         $project = Project::create();
 
-        return redirect()->route('admin.projects');
+        return redirect()->route('admin.project');
     }
 
     /**
@@ -42,8 +42,8 @@ class ProjectController extends Controller
      */
     public function show(string $id)
     {
-        $projects = Project::findOrFaill($id);
-        return view('admin.projects.show', compact('projects'));
+        $project = Project::findOrFail($id);
+        return view('admin.projects.show', compact('project'));
     }
 
     /**

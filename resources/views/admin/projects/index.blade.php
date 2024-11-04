@@ -22,6 +22,7 @@
                             <th scope="col">Start Date</th>
                             <th scope="col">End Date</th>
                             <th scope="col">Programming Language</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +35,10 @@
                                 <td>{{ $project->start_date }}</td>
                                 <td>{{ $project->end_date }}</td>
                                 <td>{{ $project->programming_language }}</td>
+                                <td>
+                                    <a href="{{ route('admin.project.show', $project->id) }}"
+                                        class="btn btn-primary btn-sm">Show</a> <!-- Pulsante per vedere i dettagli -->
+                                </td>
                             </tr>
                         @empty
                             <tr>
