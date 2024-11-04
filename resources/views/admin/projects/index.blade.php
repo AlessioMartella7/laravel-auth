@@ -37,7 +37,10 @@
                                 <td>{{ $project->programming_language }}</td>
                                 <td>
                                     <a href="{{ route('admin.project.show', $project->id) }}"
-                                        class="btn btn-primary btn-sm">Show</a> <!-- Pulsante per vedere i dettagli -->
+                                        class="btn btn-primary btn-sm">Show</a>
+                                </td>
+                                <td>
+                                    <a href="{{ route('admin.project.create') }}" class="btn btn-primary btn-sm">Create</a>
                                 </td>
                             </tr>
                         @empty

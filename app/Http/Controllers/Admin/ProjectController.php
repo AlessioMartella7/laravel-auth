@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProjectRequest;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -28,13 +29,15 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreProjectRequest $request)
     {
-        $data= $request->validated();
+        $data = $request->validated([
+
+        ]);
 
         $project = Project::create();
 
-        return redirect()->route('admin.project');
+        return redirect()->route('admin.project.index');
     }
 
     /**
