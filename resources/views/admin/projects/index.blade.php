@@ -30,7 +30,7 @@
                                 <td>{{ $project->id }}</td>
                                 <td>{{ $project->name }}</td>
                                 <td>{{ $project->description }}</td>
-                                <td><a href="{{ $project->url }}" target="_blank">{{ $project->url }}</a></td>
+                                <td>{{ $project->url }}</td>
                                 <td>{{ $project->start_date }}</td>
                                 <td>{{ $project->end_date }}</td>
                                 <td>{{ $project->programming_language }}</td>
