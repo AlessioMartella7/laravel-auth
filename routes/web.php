@@ -29,4 +29,5 @@ Route::get('/projects',[AdminProjectController::class, 'index'])->name('project.
 Route::get('/projects/create',[AdminProjectController::class, 'create'])->name('project.create');
 Route::get('/projects/{project}',[AdminProjectController::class, 'show'])->name('project.show');
 Route::post('/projects',[AdminProjectController::class, 'store'])->name('project.store');
+Route::put('/projects/{project}',[AdminProjectController::class, 'edit'])->name('project.edit');
 });
