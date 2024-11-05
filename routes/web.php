@@ -30,6 +30,6 @@ Route::delete('/projects/{project}',[AdminProjectController::class, 'destroy'])-
 Route::put('/project/{project}',[AdminProjectController::class, 'update'])->name('project.update');
 Route::get('/projects/{project}/edit',[AdminProjectController::class, 'edit'])->name('project.edit');
 Route::get('/projects/create',[AdminProjectController::class, 'create'])->name('project.create');
-Route::get('/projects/{project}',[AdminProjectController::class, 'show'])->name('project.show');
+Route::get('/projects/{project}',[AdminProjectController::class, 'show'])->withTrashed()->name('project.show');
 Route::post('/projects',[AdminProjectController::class, 'store'])->name('project.store');
 });
