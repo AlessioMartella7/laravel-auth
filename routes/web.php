@@ -27,6 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function(){
 Route::get('/projects',[AdminProjectController::class, 'index'])->name('project.index');
 Route::get('/projects/create',[AdminProjectController::class, 'create'])->name('project.create');
-Route::get('/projects/{id}',[AdminProjectController::class, 'show'])->name('project.show');
+Route::get('/projects/{project}',[AdminProjectController::class, 'show'])->name('project.show');
 Route::post('/projects',[AdminProjectController::class, 'store'])->name('project.store');
 });
