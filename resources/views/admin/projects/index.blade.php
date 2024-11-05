@@ -17,7 +17,7 @@
             <div class="col-12">
                 <table class="table table-striped table-hover">
                     <thead>
-                        <tr class="table-primary">
+                        <tr class="table-primary text-center">
                             <th scope="col">ID</th>
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
@@ -25,7 +25,7 @@
                             <th scope="col">Start Date</th>
                             <th scope="col">End Date</th>
                             <th scope="col">Programming Language</th>
-                            <th scope="col" colspan="2"></th>
+                            <th scope="col" colspan="3">Actions</th>
 
                         </tr>
                     </thead>
@@ -46,6 +46,16 @@
                                 <td>
                                     <a href="{{ route('admin.project.edit', $project) }}"
                                         class="btn btn-warning btn-sm">Edit</a>
+                                </td>
+                                <td>
+                                    <form class="d-inline" action="{{ route('admin.project.delete', $project) }}"
+                                        method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger btn-sm fw-bold text-black" type="submit">
+                                            Delete
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                         @empty
