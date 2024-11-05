@@ -25,7 +25,7 @@
                             <th scope="col">Start Date</th>
                             <th scope="col">End Date</th>
                             <th scope="col">Programming Language</th>
-                            <th scope="col"></th>
+                            <th scope="col" colspan="2"></th>
 
                         </tr>
                     </thead>
@@ -40,8 +40,12 @@
                                 <td>{{ $project->end_date }}</td>
                                 <td>{{ $project->programming_language }}</td>
                                 <td>
-                                    <a href="{{ route('admin.project.show', $project->id) }}"
+                                    <a href="{{ route('admin.project.show', $project) }}"
                                         class="btn btn-primary btn-sm">Show</a>
+                                </td>
+                                <td>
+                                    <a href="{{ route('admin.project.edit', $project) }}"
+                                        class="btn btn-warning btn-sm">Edit</a>
                                 </td>
                             </tr>
                         @empty

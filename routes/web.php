@@ -26,8 +26,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function(){
 Route::get('/projects',[AdminProjectController::class, 'index'])->name('project.index');
+Route::put('/project/{project}',[AdminProjectController::class, 'update'])->name('project.update');
+Route::get('/projects/{project}/edit',[AdminProjectController::class, 'edit'])->name('project.edit');
 Route::get('/projects/create',[AdminProjectController::class, 'create'])->name('project.create');
 Route::get('/projects/{project}',[AdminProjectController::class, 'show'])->name('project.show');
 Route::post('/projects',[AdminProjectController::class, 'store'])->name('project.store');
-Route::put('/projects/{project}',[AdminProjectController::class, 'edit'])->name('project.edit');
 });
